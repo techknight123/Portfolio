@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Asuelimen Elijah — Web developer Portfolio</title>
+  <style>
+    :root {
+      --bg: #0f1117;
+      --surface: #171a23;
+      --border: #262b38;
+      --text: #e7eaf0;
+      --muted: #9aa3b5;
+      --accent: #4ade80;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: radial-gradient(1200px 600px at 50% -10%, #1c2333 0%, var(--bg) 60%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    main {
+      width: 100%;
+      max-width: 640px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 2.5rem 2.75rem;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+    }
+
+    h1 {
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+
+    p {
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    section {
+      margin-top: 1.75rem;
+    }
+
+    section h2 {
+      color: var(--accent);
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    .skills {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .skills li {
+      background: #1f2430;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 0.35rem 0.9rem;
+      font-size: 0.9rem;
+      color: var(--text);
+    }
+
+    .contact a {
+      color: var(--accent);
+      font-size: 1.05rem;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s ease;
+    }
+
+    .contact a:hover,
+    .contact a:focus-visible {
+      border-bottom-color: var(--accent);
+    }
+
+    .socials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+
+    .project-card {
+      background: #1f2430;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.1rem 1.15rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    .project-card h3 {
+      color: var(--text);
+      font-size: 1.05rem;
+    }
+
+    .project-card p {
+      font-size: 0.95rem;
+      flex: 1;
+    }
+
+    .project-card a {
+      color: var(--accent);
+      font-size: 0.9rem;
+      text-decoration: none;
+      align-self: flex-start;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s ease;
+    }
+
+    .project-card a:hover,
+    .project-card a:focus-visible {
+      border-bottom-color: var(--accent);
+    }
+
+    .tech-tags li {
+      padding: 0.2rem 0.65rem;
+      font-size: 0.78rem;
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 1rem;
+      }
+
+      main {
+        padding: 1.75rem 1.25rem;
+      }
+    }
+
+    footer {
+      margin-top: 2rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Elijah Asuelimen — Front-End Developer</h1>
+    <p>
+      I'm a computer science graduate looking for internship and graduate trainee
+      roles in web development. I build clean, responsive web pages and I'm
+      currently learning to apply AI to the things I make.
+    </p>
+
+    <section class="about">
+      <h2>About Me</h2>
+      <p>
+        I direct AI coding tools to build, debug and iterate on front-end
+        projects, while owning the layout, interaction and quality decisions.
+        I ship a new project most weeks to keep improving.
+      </p>
+    </section>
+
+    <section class="skills-section">
+      <h2>Skills</h2>
+      <ul class="skills">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Git</li>
+      </ul>
+    </section>
+
+    <section class="projects">
+      <h2>Projects</h2>
+      <div class="project-grid">
+        <article class="project-card">
+          <h3>EDUFlex</h3>
+          <p>
+            A learning management system where teachers can publish courses and
+            students can enroll, submit assignments and track their progress.
+            Built with HTML, CSS and JavaScript.
+          </p>
+          <ul class="skills tech-tags">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ul>
+          <a href="EDUFLEX REPO URL">View on GitHub</a>
+        </article>
+        <article class="project-card">
+          <h3>Apex Arena</h3>
+          <p>
+            An esports hub where players can register for tournaments, view
+            match schedules and follow live standings. Built with HTML, CSS and
+            JavaScript.
+          </p>
+          <ul class="skills tech-tags">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ul>
+          <a href="APEX ARENA REPO URL">View on GitHub</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact">
+      <h2>Contact</h2>
+      <p><a href="mailto:elijahasuelimen20@gmail.com">elijahasuelimen20@gmail.com</a></p>
+      <p class="socials">
+        <a href="https://github.com/techkight123">GitHub</a>
+        <a href="https://www.linkedin.com/in/elijah-asuelimen">LinkedIn</a>
+      </p>
+    </section>
+
+    <footer>Made with Freebuff · 2026</footer>
+  </main>
+</body>
+</html>
